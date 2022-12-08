@@ -1,3 +1,7 @@
+# About
+
+This project is a simple dummy E-commerce app, where you can login with any email-id and you can add products to cart. Your email and cart data is stored in the backend and you can see the cart whenever you login
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

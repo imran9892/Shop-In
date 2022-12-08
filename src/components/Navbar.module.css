@@ -1,0 +1,39 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+.logo img {
+  height: 32px;
+}
+.logo h1 {
+  font-size: xx-large;
+  font-weight: 400;
+  color: black;
+}
+
+.navLink a {
+  text-decoration: none;
+}
+
+.navLink button {
+  color: gray;
+  font-size: medium;
+}
+
+.navLink .cart {
+  color: #2e7d32;
+}
+
+.navLink button:hover,
+.navLink button:active,
+.navLink a.active button {
+  color: black;
+  background: none;
+}
+
+.navLink .cart:hover,
+.navLink .cart:active {
+  color: #005604;
+}
