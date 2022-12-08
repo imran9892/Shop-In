@@ -109,3 +109,52 @@ export const loginUser = async (user) => {
     return responseData;
   }
 };
+
+export const deleteUser = async ({ idToken, uid }) => {
+  const responseData = {
+    data: null,
+    status: false,
+    error: null,
+  };
+  try {
+    //delete user from database
+    const deleteResponse = await fetch(
+      `${process.env.REACT_APP_FIREBASE_DATABASE}/users/${uid}.json/?auth=${idToken}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const deleteData = await deleteResponse.json();
+    if (!deleteResponse.ok) {
+      console.log(deleteData);
+      responseData.error = deleteData.error;
+      return responseData;
+    }
+    //delete user from Auth
+    const responseAuth = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/accounts:delete?key=${process.env.REACT_APP_FIREBASE_API_KEY}`,
+      {
+        method: "POST",
+        body: JSON.stringify({ idToken }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const deleteAuth = await responseAuth.json();
+    if (!responseAuth.ok) {
+      responseData.error = deleteAuth.error.message;
+      return responseData;
+    }
+
+    responseData.status = true;
+    responseData.data = { deleteData, deleteAuth };
+    return responseData;
+  } catch (err) {
+    responseData.error = err;
+    return responseData;
+  }
+};
