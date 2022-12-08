@@ -1,6 +1,11 @@
 # About
 
-This project is a simple dummy E-commerce app, where you can login with any email-id and you can add products to cart. Your email and cart data is stored in the backend and you can see the cart whenever you login
+This project is a simple dummy E-commerce app, where you can login with any email-id and you can add products to cart. Your email and cart data is stored in the backend and you can see your cart whenever you login.
+
+## Check out the website
+Website : [Shop-In](https://shop-in-54508.web.app)
+
+Note: Kindly use it in desktop site mode as I didn't optimize for mobile display
 
 # Getting Started with Create React App
 
