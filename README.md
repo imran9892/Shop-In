@@ -3,7 +3,10 @@
 This project is a simple dummy E-commerce app, where you can login with any email-id and you can add products to cart. Your email and cart data is stored in the backend and you can see your cart whenever you login.
 
 ## Check out the website
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c4c2321cbf53974d3d9abcd78d693e97a2ff50a
 Website : [Shop-In](https://shop-in-54508.web.app)
 
 Note: Kindly use it in desktop site mode as I didn't optimize for mobile display
